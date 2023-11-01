@@ -19,7 +19,7 @@ RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
 
 RCT_EXPORT_METHOD(findEvents:(RCTResponseSenderBlock)callback)
 {
-  callback(@[[NSNull null], @"Hello There Native Module From iOS"]);
+  callback(@[[NSNull null], @"Hello There Native Module From iOS for Testing"]);
 }
 
 @end

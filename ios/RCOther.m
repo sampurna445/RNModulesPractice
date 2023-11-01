@@ -20,7 +20,7 @@ RCT_EXPORT_METHOD(doSomething:(NSString *)message)
 RCT_EXPORT_METHOD(getData:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
   // Simulate fetching data
-  NSArray *data = @[@"Item 1", @"Item 2", @"Item 3"];
+  NSArray *data = @[@"Item 1", @"Item 2", @"Item 3",@"Testing"];
   resolve(data);
 }
 

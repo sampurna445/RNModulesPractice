@@ -6,6 +6,7 @@ import {
   NativeModules,
   SafeAreaView,
 } from 'react-native';
+import styles from './styles';
 
 const App = () => {
   const [helloData, setHelloData] = useState(null);
@@ -30,32 +31,34 @@ const App = () => {
         console.error(error);
       });
   };
-
   return (
-    <SafeAreaView style={{}}>
-      <TouchableOpacity onPress={handlePressHello}>
-        <Text>Call RNHello Module</Text>
+    <View style={styles.container}>
+      <TouchableOpacity style={styles.button} onPress={handlePressHello}>
+        <Text style={styles.buttonText}>Call RNHello Module</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={handlePressOther}>
-        <Text>Call RCOther Module</Text>
+      <TouchableOpacity style={styles.button} onPress={handlePressOther}>
+        <Text style={styles.buttonText}>Call RCOther Module</Text>
       </TouchableOpacity>
 
       {helloData && (
-        <View style={{}}>
-          <Text>Hello Data: {helloData}</Text>
+        <View style={styles.dataContainer}>
+          <Text style={styles.dataText}>Hello Data:</Text>
+          <Text style={styles.dataText}>{helloData}</Text>
         </View>
       )}
 
       {otherData && (
-        <View style={{}}>
-          <Text>Other Data:</Text>
+        <View style={styles.dataContainer}>
+          <Text style={styles.dataText}>Other Data:</Text>
           {otherData.map((item, index) => (
-            <Text key={index}>{item}</Text>
+            <Text key={index} style={styles.dataText}>
+              {item}
+            </Text>
           ))}
         </View>
       )}
-    </SafeAreaView>
+    </View>
   );
 };
 
