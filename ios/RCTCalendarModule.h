@@ -1,16 +1,5 @@
-//
 //  RCTCalendarModule.h
-//  RNModulesPractice
-//
-//  Created by itc on 01/11/2023.
-//
+#import <React/RCTBridgeModule.h>
 
-#import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface RCTCalendarModule : NSObject
-
+@interface RCTCalendarModule : NSObject <RCTBridgeModule>
 @end
-
-NS_ASSUME_NONNULL_END
